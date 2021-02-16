@@ -3,7 +3,7 @@
 It's an asynchronous scraper template. Yes it is.  
 You don't need to think that this is a framework, this is something that needs to be modified to suit your needs in each specific case.  
 
-If you need something ready-made than take [Scrapi](https://scrapy.org/).
+If you need something ready-made than take [Scrapy](https://scrapy.org/).
 
 ## Dependencies
 
