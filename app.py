@@ -27,10 +27,14 @@ else:
 
 downloader = Downloader(source, Config.REDIS_URI, Config.DOWNLOAD_LIMIT)
 parser = Parser(Config.REDIS_URI, Config.PARSE_LIMIT)
+writer = Writer(Config.OUTPUT_FILE_PATH, Config.REDIS_URI)
 
 downloader_process = Process(target=downloader.run)
 downloader_process.start()
 
 parser_process = Process(target=parser.run)
 parser_process.start()
-parser_process.join()
+
+writer_process = Process(target=writer.run)
+writer_process.start()
+writer_process.join()
