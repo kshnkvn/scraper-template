@@ -30,6 +30,7 @@ class Parser:
         # publish message in the redis that
         # the parser has finished working
         self.redis.publish('channel:parser', 'finished')
+        self.redis.close()
 
         logging.info('Parser completes its work.')
 
